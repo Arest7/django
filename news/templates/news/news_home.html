@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+
+{% block title%}Articles{% endblock %}
+{% block content %}
+<div class="features">
+    <h1>Articles</h1>
+    {% for el in news %}
+        <div class="alert alert-warning">
+            <h3>{{ el.title }}</h3>
+            <p>{{ el.abstract }}</p>
+            Keywords: {{el.keywords}}
+            <br>
+            <br>
+            <b> <i>{{el.owner}}</i></b>
+            <br>
+            <br>
+            {{el.job}}
+            <br>
+            <br>
+            {{el.date}}
+            <br>
+            <button class="downloadButton" data-filename="{{ el.file_name }}">Download PDF</button>
+        </div>
+    {% endfor %}
+    <script>
+        document.querySelectorAll('.downloadButton').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var pdfFilename = this.getAttribute('data-filename');
+        
+                // Construct the URL for the download view with the PDF filename
+                var downloadUrl = "/news/media/" + encodeURIComponent(pdfFilename);
+                console.log('Download URL:', downloadUrl);
+        
+                // Create a link element and trigger the click event
+                var link = document.createElement('a');
+                link.href = downloadUrl;
+                link.download = pdfFilename;
+                link.type = 'application/pdf';  // Specify the file type
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        });
+    </script>
+    
+    
+</div>
+{% endblock %}
