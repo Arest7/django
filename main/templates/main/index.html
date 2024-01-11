@@ -1,0 +1,102 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Developments of the cutting-edge pedagogical education{% endblock %}
+
+<img src="{% static 'main/img/page.png' %}" alt=" ">
+<span class="page"></span>
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+
+                <div class="card-content">
+                    <h4>Methods of improving students' political knowledge in history classes</h4>
+                    
+                    
+                    <br>
+                    <p>The methods used in the educational system, the classification of history teaching
+                        methods by methodologists, the importance of using demonstration methods. The teaching method
+                        means the methods of joint activity of the teacher and students aimed at achieving a certain goal in
+                        the educational process. In other words, teaching methods are the combination of both activities, i.e.
+                        equipping students with knowledge, skills and abilities by the teacher, educating them morally,
+                        forming a scientific worldview in them, and the same provided by the students. includes the methods
+                        used in the activity of acquiring scientific knowledge, skills and competencies.</p>
+                    <button id="viewPdfButton" data-pdf-filename="001_Methods_of_improving_students_political_knowledge_in_history.pdf">View PDF</button>
+
+
+
+
+            </div>
+        </div>
+    
+        <div class="card" onclick="window.location.href=''">
+            <div class="card-content">
+                <h3>Card Title 2</h3>
+                <br>
+                <br>
+                <p>Description of the card goes here.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='https://example.com'">
+            <div class="card-content">
+                
+                <h3>Card Title 3</h3>
+                <br>
+                <br>
+                <p>Description of the card goes here.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='https://example.com'">
+            <div class="card-content">
+                
+                <h3>Card Title 4</h3>
+                <br>
+                <br>
+                <p>Description of the card goes here.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='https://example.com'">
+            <div class="card-content">
+                
+                <h3>Card Title 5</h3>
+                <br>
+                <br>
+                <p>Description of the card goes here.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        document.getElementById('viewPdfButton').addEventListener('click', function(event) {
+            event.preventDefault();
+    
+            // Get the PDF filename from the button's data attribute
+            var pdfFilename = this.getAttribute('data-pdf-filename');
+            var encodedFilename = encodeURIComponent(pdfFilename);
+    
+            // Construct the file URL using MEDIA_URL
+            var fileUrl = 'news/media/' + encodedFilename;
+    
+            // Open the file in a new window or tab
+            window.open(fileUrl, '_blank');
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+{% endblock %}
+

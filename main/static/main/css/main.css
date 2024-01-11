@@ -1,0 +1,173 @@
+body {
+    background: white;
+    color: #4fc6eb;
+    margin: 0;
+}
+
+aside {
+    float: left;
+    background: rgba(223, 247, 253, 0.842);
+    width: 20%;
+    padding: 2.5%;
+    height: 200vh;
+    color: #ffffff;
+    border-right: 5px solid #ffffff;
+    margin-bottom: 20px;
+}
+
+aside img {
+    width: 180px;
+    float: left;
+}
+
+.downloadButton {
+    background-color: #4fc6eb;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 4px;
+    cursor: pointer;
+    border: 2px solid #4fc6eb;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.downloadButton:hover {
+    background-color: #2b92b8;
+    color: white;
+}
+#viewPdfButton {
+    background-color: #4fc6eb;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 4px;
+    cursor: pointer;
+    border: 2px solid #4fc6eb;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#viewPdfButton:hover {
+    background-color: #2b92b8;
+    color: white;
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+
+
+
+aside ul {list-style: none}
+aside ul li{
+    color: #4fc6eb;
+    display: block;
+    margin-top: 20px;
+    transition: transform .5s ease;
+}
+
+aside ul li:hover, aside a:hover{
+    color: #333;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features {
+    float: left;
+    color: #4fc6eb;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 740px; margin: 20px auto;}
+
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 940px;
+    margin: 20px 10%;
+    text-align: left;
+}
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+
+
+.card-container {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    place-self: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.card {
+    width: 400px;
+    height: 550px;
+    padding: 12px;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+
+.card-content {
+    padding: 5px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 0;
+    color: #333333;
+}
+
+.card-content h4 {
+    margin: 0;
+    color: #333333;
+}
+
+.card-content p {
+    color: #666666;
+}
+
+.card a {
+    display: block;
+    padding: 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card a:hover {
+    background-color: #0056b3;
+}
